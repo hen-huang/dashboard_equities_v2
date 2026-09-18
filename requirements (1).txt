@@ -1,0 +1,17 @@
+# Equity | Brazil — Ibovespa (app_ibovespa_live.py)
+# Instalar com:  pip install -r requirements.txt
+
+streamlit>=1.30
+pandas>=2.0
+numpy>=1.24
+yfinance>=0.2.40
+plotly>=5.18
+requests>=2.31
+
+# Notas:
+# - yfinance: use sempre a versão mais nova possível. A Yahoo muda o endpoint
+#   com frequência e versões antigas quebram ("possibly delisted", JSONDecodeError).
+#   Se der erro de download:  pip install -U yfinance
+# - O app usa st.cache_data e o parâmetro `use_container_width`, ambos presentes
+#   desde o Streamlit 1.30.
+# - pandas >= 2.0 é necessário por causa do resample("ME") e do Styler.map.
